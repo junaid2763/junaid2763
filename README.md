@@ -30,7 +30,7 @@
 
 <!--🔳TERMINAL / 🌐WEBSITES: https://github.com/asciinema/asciinema & https://github.com/dstein64/gifcast -->
 <p align="center">
-<img src="https://raw.githubusercontent.com/trinib/trinib/main/images/terminal.gif" width="400" height="400">
+<img src="https://raw.githubusercontent.com/junaid2763/junaid2763/main/images/terminal.gif" width="500">
 
 <!--📏LINE-->
 <p align="center">
