@@ -3,37 +3,31 @@ name: Generate Snake
 on:
   # run automatically every 12 hours
   schedule:
-    - cron: "0 0 5 31 2 ?"
-  
-  # allows to manually run the job at any time
+    - cron: "0 */12 * * *"
+  # allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
-  # run on every push on the master branch
+  # run after every push to main
   push:
     branches:
-    - main
-    
+      - main
+
+permissions:
+  contents: write
+
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-    
+    timeout-minutes: 10
     steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
-      - name: generate github-contribution-grid-snake.svg
-        uses: Platane/snk@v3
+      - name: Generate snake svg from the contribution graph
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
+            dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bff6c2,#a7ff8d,#90f464,#8cf14b,#86d93c
 
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push github-contribution-grid-snake.svg to the output branch
+      - name: Push the svg files to the "snake" branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: snake
