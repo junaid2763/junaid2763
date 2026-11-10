@@ -74,7 +74,7 @@ I'm a software developer from Pakistan 🇵🇰 who builds web and mobile applic
 <img src="https://i.imgur.com/x1KbuCq.gif" width="500">
 
 <!--🐍📈SNAKEGRAPH / 🌐WEBSITE: https://github.com/Platane/snk & https://github.com/ironmaniiith/Github-profile-name-writer -->
-<img src="https://raw.githubusercontent.com/junaid2763/junaid2763/snake/github-snake-dark.svg" width="100%">
+<img src="https://raw.githubusercontent.com/JUNAID/JUNAID/snake/github-snake-dark.svg" width="100%">
 
 ---
 
